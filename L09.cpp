@@ -39,12 +39,12 @@ bool czyPunktNalezyDoObszaru(double* obX, double* obY, int liczPkt, double x, do
 
 void test_wsp_x()
 {
-	double tabX[] = { 0.0,-1.0, 1.0, 3.0 };
-	double tabY[] = { 0.0, 1.0, 2.0, 1.0 };
+	double tabX[] = { 1.0, 1.0, 1.0, 2.0 };
+	double tabY[] = { 3.0, 2.0, 2.0, 1.0 };
 	double xP = -0.5;
 	double yP = 0.5;
 	const int SIZE = sizeof(tabX) / sizeof(double);
-	if (czyPunktNalezyDoObszaru(tabX,tabY,SIZE,xP,yP)==true)
+	if (czyPunktNalezyDoObszaru(tabX,tabY,SIZE,xP,yP))
 	{
 		cerr << "Nie ma bledu";
 	}
@@ -55,8 +55,8 @@ void test_wsp_x()
 
 void test_wsp_y()
 {
-	double tabX[] = { 0.0,-1.0, 1.0, 3.0 };
-	double tabY[] = { 0.0, 1.0, 2.0, 1.0 };
+	double tabX[] = { 1.0, 1.0, 1.0, 2.0 };
+	double tabY[] = { 3.0, 2.0, 2.0, 1.0 };
 	double xP = -0.5;
 	double yP = 0.5;
 	const int SIZE = sizeof(tabX) / sizeof(double);
@@ -71,12 +71,12 @@ void test_wsp_y()
 
 void test_x_klas_P()
 {
-	double tabX[] = { 0.0,-1.0, 1.0, 3.0 };
-	double tabY[] = { 0.0, 1.0, 2.0, 1.0 };
+	double tabX[] = { 1.0, 1.0, 1.0, 2.0 };
+	double tabY[] = { 3.0, 2.0, 2.0, 1.0 };
 	double xP = -0.5;
 	double yP = 0.5;
 	const int SIZE = sizeof(tabX) / sizeof(double);
-	if (czyPunktNalezyDoObszaru(nullptr, nullptr, SIZE, xP, yP) == true)
+	if (czyPunktNalezyDoObszaru(nullptr, nullptr, SIZE, xP, yP))
 	{
 		cerr << "Nie ma bledu";
 	}
@@ -89,8 +89,8 @@ void test_y_klas_P()
 {
 	try
 	{
-		double tabX[] = { 0.0,-1.0, 1.0, 3.0 };
-		double tabY[] = { 0.0, 1.0, 2.0, 1.0 };
+		double tabX[] = { 1.0, 1.0, 1.0, 2.0 };
+		double tabY[] = { 3.0, 2.0, 2.0, 1.0 };
 		double xP = -0.5;
 		double yP = 0.5;
 		const int SIZE = sizeof(tabX) / sizeof(double);
@@ -108,8 +108,8 @@ void test_y_klas_P()
 
 void main(void)
 {
-	double tabX[] = { 0.0,-1.0, 1.0, 3.0 };
-	double tabY[] = { 0.0, 1.0, 2.0, 1.0 };
+	double tabX[] = { 1.0, 1.0, 1.0, 2.0 };
+	double tabY[] = { 3.0, 2.0, 2.0, 1.0 };
 	double xP = -0.5;
 	double yP = 0.5;
 	const int SIZE = sizeof(tabX) / sizeof(double);
