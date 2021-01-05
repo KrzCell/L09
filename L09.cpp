@@ -3,7 +3,7 @@
 using namespace std;
 
 
-#define ZadanieB
+#define ZadanieC
 
 #ifdef ZadanieA
 
@@ -283,7 +283,7 @@ int main()
 #ifdef ZadanieC
 int main()
 {
-	// TU ROZWIĄZUJ ZADANIE C:
+	
 }
 #endif
 
