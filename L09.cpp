@@ -135,7 +135,7 @@ int wyszukajPierwsza(double* tablica, int rozmiar, double wartSzukana)
 		if (tablica[index] == wartSzukana)
 			return index;  // Znaleziono pierwsze wystąpienie - przerywam
 	}
-	throw std::domain_error("Wratosc nie wystąpila");
+	throw std::domain_error("Wartosc nie wystąpila");
 }
 
 int ileRazyZnak(const char* text, char znak)
@@ -146,9 +146,30 @@ int ileRazyZnak(const char* text, char znak)
 	return liczbaWystapien;
 }
 
+void test_1()
+{
+	double tab[] = { 1.0,1.1,0.3,4.0,5.0 };
+	int rozmiar = sizeof(tab);
+	double wartosc_szukana=4.0;
+	int oczekiwana_wart = 3;
+	if (wyszukajPierwsza(tab, rozmiar, wartosc_szukana) == oczekiwana_wart)
+		cerr << "Ok";
+	else
+		cerr << "Blad";
+}
+
+void test_2()
+{
+	double tab[] = { 1.0,1.1,0.3,4.0,5.0 };
+	int i = 0;
+	
+}
+
 int main()
 {
-	// TU ROZWIĄZUJ ZADANIE B:
+	double tab[] = { 1.0,1.1,0.3,4.0,5.0 };
+	cout<<wyszukajPierwsza(tab, 5, 4.0)<<endl;
+	test_1;
 }
 
 #endif
