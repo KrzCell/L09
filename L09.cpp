@@ -3,7 +3,7 @@
 using namespace std;
 
 
-#define ZadanieA 
+#define ZadanieB
 
 #ifdef ZadanieA
 
@@ -76,7 +76,7 @@ void test_x_klas_P()
 	double xP = -0.5;
 	double yP = 0.5;
 	const int SIZE = sizeof(tabX) / sizeof(double);
-	if (czyPunktNalezyDoObszaru(nullptr, nullptr, SIZE, xP, yP))
+	if (czyPunktNalezyDoObszaru(nullptr, tabY, SIZE, xP, yP))
 	{
 		cerr << "Nie ma bledu";
 	}
@@ -94,7 +94,7 @@ void test_y_klas_P()
 		double xP = -0.5;
 		double yP = 0.5;
 		const int SIZE = sizeof(tabX) / sizeof(double);
-		czyPunktNalezyDoObszaru(tabX, tabY, SIZE, xP, yP);
+		czyPunktNalezyDoObszaru(tabX, nullptr, SIZE, xP, yP);
 	}
 	catch (invalid_argument)
 	{
@@ -118,7 +118,6 @@ void main(void)
 	test_wsp_y;
 	test_x_klas_P;
 	test_y_klas_P;
-
 }
 
 #endif
